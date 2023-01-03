@@ -11,7 +11,7 @@ export default {
     async findRoomByName(name){
         const listTypeRooms = await models.loaiphong.findAll({
             where:{
-                tenloaiphong:{
+                TenLoaiPhong:{
                     [Op.iLike]:'%'+name+'%',
                 }
             }
@@ -20,8 +20,8 @@ export default {
     },
     async addTypeRoom (typeRoom){
         await models.loaiphong.create({
-            tenloaiphong:typeRoom.tenloaiphong,
-            mota:typeRoom.mota
+            TenLoaiPhong:typeRoom.tenloaiphong,
+            MoTa:typeRoom.mota
         })
     
     }

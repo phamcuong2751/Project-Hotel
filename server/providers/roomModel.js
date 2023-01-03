@@ -13,7 +13,7 @@ export default {
     async getRoomByName(name){
         const rooms = await models.phong.findAll({
             where:{
-                ten:{
+                Ten:{
                     [Op.iLike]:'%'+name+'%',
                 }
         }})
