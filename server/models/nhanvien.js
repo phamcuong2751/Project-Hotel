@@ -38,6 +38,10 @@ export default class nhanvien extends Model {
     LoaiNV: {
       type: DataTypes.STRING(255),
       allowNull: true
+    },
+    Fullname: {
+      type: DataTypes.STRING(255),
+      allowNull: true
     }
   }, {
     sequelize,

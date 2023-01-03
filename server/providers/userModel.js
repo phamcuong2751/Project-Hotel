@@ -18,12 +18,11 @@ export default {
     return user[0];
   },
   async addNewUser(user) {
-    console.log("Add User on here ");
     await models.nhanvien.create({
-      name: user.name,
       username: user.username,
       password: user.password,
-      role: user.role,
+      LoaiNV: user.role,
+      Fullname: user.name,
     });
   },
 };

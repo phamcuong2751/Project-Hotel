@@ -12,7 +12,7 @@ export default class khachhang extends Model {
     },
     MaLoaiKH: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: false
     },
     TenKH: {
       type: DataTypes.STRING(255),
@@ -29,7 +29,7 @@ export default class khachhang extends Model {
     },
     GioiTinh: {
       type: DataTypes.STRING(255),
-      allowNull: true
+      allowNull: false
     },
     SoDienThoai: {
       type: DataTypes.STRING(12),
