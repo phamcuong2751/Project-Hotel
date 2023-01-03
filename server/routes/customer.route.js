@@ -24,6 +24,7 @@ Router.post('/addNew',async(req,res)=>{
             gioitinh,
             sodienthoai
         } 
+        
         await customerModel.addNewCustomer(newCustomer);
         res.status(200).json({status:'Success'})
     } catch (error) {

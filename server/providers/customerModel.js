@@ -17,18 +17,18 @@ export default {
     },
     async addNewCustomer(customer){
         await models.khachhang.create({
-            maloaikh:customer.maloaikh,
-            tenkh: customer.tenkh,
-            socccd: customer.socccd,
-            email:customer.email,
-            gioitinh: customer.gioitinh,
-            sodienthoai:customer.sodienthoai
+            MaLoaiKH:customer.maloaikh,
+            TenKH: customer.tenkh,
+            SoCCCD: customer.socccd,
+            Email:customer.email,
+            GioiTinh: customer.gioitinh,
+            SoDienThoai:customer.sodienthoai
         })
     },
     async findCustomerByIdCard(socccd){
         const customer =  await models.khachhang.findAll({
             where:{
-                socccd:socccd,
+                SoCCCD:socccd,
             }
         })
         return customer;
@@ -36,7 +36,7 @@ export default {
     async findCustomerById(id){
         const customer =  await models.khachhang.findAll({
             where:{
-                makh:id,
+                MaKH:id,
             }
         })
         return customer;
